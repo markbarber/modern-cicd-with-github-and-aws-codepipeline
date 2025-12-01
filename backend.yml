@@ -132,7 +132,6 @@ Resources:
                   - dynamodb:Scan
                   - dynamodb:UpdateItem
                 Resource: !GetAtt RoomsTable.Arn
-
   ECSSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
@@ -274,7 +273,6 @@ Resources:
       Type: String
       Value: !Sub "https://${CloudFrontDistribution.DomainName}"
 
-
 Outputs:
   DynamoDBTableName:
     Description: "Name of the DynamoDB Table"
@@ -288,6 +286,3 @@ Outputs:
   ECSServiceName:
     Description: "Name of the ECS Service"
     Value: !Ref ECSService
-    Condition: 
-    Condition: 
-    
